@@ -1,10 +1,38 @@
 {
-  "count": 289,
+  "count": 291,
   "crawled_date_min": "2026-04-15",
-  "crawled_date_max": "2026-05-14",
+  "crawled_date_max": "2026-05-15",
   "published_date_min": "2026-01-16",
-  "published_date_max": "2026-05-12",
+  "published_date_max": "2026-05-13",
   "papers": [
+    {
+      "arxiv_id": "2605.13915",
+      "title": "Multi-Scale Dequant: Eliminating Dequantization Bottleneck via Activation Decomposition for Efficient LLM Inference",
+      "authors": "Lingchao Zheng, Yuwei Fan, Jun Li, Chengqiu Hu, Qichen Liao, Junyi Fan, Rui Shi, Fangzheng Miao",
+      "affiliations": "Huawei",
+      "published_date": "2026-05-13",
+      "categories": "stat.ML cs.AI cs.LG",
+      "abstract": "Quantization is essential for efficient large language model (LLM) inference, yet the dequantization step-converting low-bit weights back to high-precision for matrix multiplication has become a critical bottleneck on modern AI accelerators. On architectures with decoupled compute units (e.g., Ascend NPUs), dequantization operations can consume more cycles than the matrix multiplication itself, leaving the high-throughput tensor cores underutilized. This paper presents Multi-Scale Dequant (MSD), a quantization framework that removes weight/KV dequantization from the GEMM critical path. Instead of lifting low-bit weights to BF16 precision, MSD decomposes high-precision BF16 activations into multiple low-precision components, each of which can be multiplied directly with quantized weights via native hardware-accelerated GEMM. This approach shifts the computational paradigm from precision conversion to multi-scale approximation, avoiding INT8-to-BF16 weight conversion before GEMM. We instantiate MSD for two weight formats and derive tight error bounds for each. For INT8 weights (W4A16), two-pass INT8 decomposition achieves near 16 effective bits. For MXFP4 weights (W4A16), two-pass MXFP4 decomposition yields near 6.6 effective bits with error bound 1/64 per block surpassing single-pass MXFP8(5.24 bits) while maintaining the same effective GEMM compute time. We further derive closed-form latency and HBM traffic models showing that MSD avoids the Vector-Cube pipeline stall caused by dequantization and reduces KV cache HBM traffic by up to 2.5 times in attention. Numerical simulations on matrix multiplication and Flash Attention kernels confirm that MSD does not degrade accuracy compared to dequantization baselines, and in many settings achieves lower L2 error.",
+      "summary_cn": "提出多尺度去量化（MSD）框架，将高精度BF16激活分解为多个低精度分量直接在GEMM上计算，消除了推理中的反量化瓶颈。INT8权重两遍分解达约16有效比特，MXFP4达约6.6有效比特，超越单遍MXFP8，减少KV缓存HBM流量达2.5倍，数值验证不降低精度。",
+      "pdf_filename": "2605.13915.pdf",
+      "crawled_date": "2026-05-15",
+      "notes": "",
+      "pdf_url": "https://arxiv.org/pdf/2605.13915"
+    },
+    {
+      "arxiv_id": "2605.13403",
+      "title": "RotVLA: Rotational Latent Action for Vision-Language-Action Model",
+      "authors": "Qiwei Li, Xicheng Gong, Xinghang Li, Peiyan Li, Quanyun Zhou, Hangjun Ye, Jiahuan Zhou, Yadong Mu",
+      "affiliations": "Wangxuan Institute of Computer Technology, Peking University; Xiaomi Robotics; CASIA",
+      "published_date": "2026-05-13",
+      "categories": "cs.RO cs.CV",
+      "abstract": "Latent Action Models (LAMs) have emerged as an effective paradigm for handling heterogeneous datasets during Vision-Language-Action (VLA) model pretraining, offering a unified action space across embodiments. However, existing LAMs often rely on discrete quantization encode and decode pipelines, which can lead to trivial frame reconstruction behavior, limited representational capacity, and a lack of physically meaningful structure. We introduce RotVLA, a VLA framework built on a continuous rotational latent action representation. Latent actions are modeled as elements of SO(n), providing continuity, compositionality, and structured geometry aligned with real-world action dynamics. A triplet frame learning framework further enforces meaningful temporal dynamics while avoiding degeneration. RotVLA consists of a VLM backbone and a flow-matching action head, pretrained on large-scale cross-embodiment robotic datasets and human videos with latent-action supervision. For downstream robot control, the flow-matching head is extended into a unified action expert that jointly denoises latent and robot actions. Here, latent actions serve as a latent planner, providing high-level guidance that conditions action generation. With only 1.7B parameters and 1700+ hours of pretraining data, RotVLA achieves 98.2% on LIBERO and 89.6% / 88.5% on RoboTwin2.0 under clean and randomized settings, respectively. It also demonstrates strong real-world performance on manipulation tasks, consistently outperforming existing VLA models.",
+      "summary_cn": "提出RotVLA框架，用连续旋转潜动作表示（SO(n)元素）替代离散量化编码-解码，解决VLA模型表示能力有限和退化解问题。三元组框架学习与流匹配动作头结合，跨本体预训练后1.7B参数在LIBERO达98.2%，RoboTwin2.0达89.6%/88.5%，真实操作任务持续优于现有VLA模型。",
+      "pdf_filename": "2605.13403.pdf",
+      "crawled_date": "2026-05-15",
+      "notes": "",
+      "pdf_url": "https://arxiv.org/pdf/2605.13403"
+    },
     {
       "arxiv_id": "2605.12765",
       "title": "Inference-Time Machine Unlearning via Gated Activation Redirection",
