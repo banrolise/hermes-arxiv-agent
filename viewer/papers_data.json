@@ -1,10 +1,24 @@
 {
-  "count": 383,
+  "count": 384,
   "crawled_date_min": "2026-04-15",
-  "crawled_date_max": "2026-06-13",
+  "crawled_date_max": "2026-06-16",
   "published_date_min": "2026-01-16",
   "published_date_max": "2026/06/03",
   "papers": [
+    {
+      "arxiv_id": "2606.13894",
+      "title": "Gefen: Optimized Stochastic Optimizer",
+      "authors": "Nadav Benedek, Tomer Koren, Ohad Fried",
+      "affiliations": "Reichman University; Tel Aviv University; Google Research",
+      "published_date": "2026-06-11",
+      "categories": "cs.LG, cs.AI, cs.CL, cs.CV",
+      "abstract": "AdamW is a default optimizer for modern deep learning, but its first and second moment states add roughly two parameter-sized buffers to training memory. We propose Gefen, a memory-efficient optimizer that automatically shares second-moment estimates across parameter blocks and quantizes the first moment using a learned codebook, thereby reducing AdamW's memory footprint by ~8x while maintaining the same performance, corresponding to a reduction of 6.5 GiB per billion parameters. The method is motivated by a theoretical result showing that large mixed Hessian entries constrain the ratio of squared gradients toward one, suggesting that Hessian-aligned parameters are natural candidates for sharing second-moment statistics. Since computing Hessians is impractical at scale, Gefen infers block structure from the initial squared gradients, requiring no architecture-specific metadata or hyperparameters beyond AdamW defaults. Gefen learns an exact histogram-based dynamic-programming quantization codebook and reuses the same blocks for first-moment scaling. Across diverse experiments, Gefen achieves the lowest peak optimizer memory among the compared AdamW-like methods while maintaining AdamW-level performance. In FSDP and DDP training, the reduced memory footprint enables larger microbatches and improves throughput significantly over AdamW, providing a practical drop-in replacement with lower memory usage that can increase throughput and enable training larger models or using larger batch sizes. We provide the complete Python implementation, including fused CUDA kernels at https://github.com/ndvbd/Gefen",
+      "summary_cn": "Gefen是一种内存高效的优化器，通过自动共享参数块间的二阶矩估计并对一阶矩进行学习码本量化，将AdamW内存占用降低约8倍（每十亿参数减少6.5 GiB）。该方法基于Hessian亲和性的理论分析，从初始梯度自动推断分组结构，无需架构特定元数据。在FSDP和DDP训练中，降低的内存占用支持更大微批次，显著提升吞吐量，同时保持与AdamW相当的性能。",
+      "pdf_filename": "2606.13894.pdf",
+      "crawled_date": "2026-06-16",
+      "notes": "",
+      "pdf_url": "https://arxiv.org/pdf/2606.13894"
+    },
     {
       "arxiv_id": "2606.13054",
       "title": "TWLA: Achieving Ternary Weights and Low-Bit Activations for LLMs via Post-Training Quantization",
