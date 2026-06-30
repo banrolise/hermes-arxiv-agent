@@ -1,10 +1,38 @@
 {
-  "count": 408,
+  "count": 410,
   "crawled_date_min": "2026-04-15",
-  "crawled_date_max": "2026-06-27",
+  "crawled_date_max": "2026-06-30",
   "published_date_min": "2026-01-16",
   "published_date_max": "2026/06/03",
   "papers": [
+    {
+      "arxiv_id": "2606.27871",
+      "title": "LocalNav: Distilling Frontier VLMs and Embodied RL for On-Device Object Goal Navigation",
+      "authors": "Nicolas Baumann, Liam Boyle, Pu Deng, Edoardo Ghignone, Boyang Sun, Marc Pollefeys, Luca Benini, Michele Magno",
+      "affiliations": "Center for Project-Based Learning, ETH Zurich; Integrated Systems Laboratory, ETH Zurich; Computer Vision and Geometry, ETH Zurich",
+      "published_date": "2026-06-26",
+      "categories": "cs.RO",
+      "abstract": "Vision Language Models (VLMs) have emerged in the robotic domain as a powerful tool that enables environmental perception with language context, serving as a catalyst for open-vocabulary tasks like ObjectNav. Yet, their computational footprint typically confines them to cloud execution, hindering low-latency inference with local deployment on resource-constrained robots. To address this challenge, we present a distillation strategy that transfers complex spatial-semantic reasoning from large frontier models into a lightweight, 4B-parameter local VLM for edge execution on embedded GPU devices (e.g., Jetson Orin). We first establish a State of the Art (SotA), Scene Graph (SG)-based pipeline using Claude Sonnet 4.6, achieving a 39.7% Success Rate (SR) on the HM3D OVON benchmark. We then demonstrate that fine-tuning Qwen3.5-4B on just 500 frontier reasoning traces effectively enables navigation capabilities, yielding a SR of 34.5%, narrowing the gap to the performance of large cloud models. Finally, we introduce E-RLVR with Token Generation (TG) regularization to compress output sequence lengths for physical deployment while grounding the agent in its task. This downstream optimization reduces TG overhead by 72.1% and latency by 71.8%. Combined with quantization, this joint strategy yields a cumulative 82.8% reduction in overall inference latency without significantly sacrificing performance, presenting a viable paradigm for local, low-latency VLM execution on mobile robots.",
+      "summary_cn": "LocalNav提出一种蒸馏策略，将大前沿VLM的复杂空间语义推理能力迁移至轻量级4B参数本地VLM，用于资源受限机器人的边缘端物体目标导航。方法首先利用Claude Sonnet 4.6构建基于场景图的SOTA流水线（SR 39.7%），再用约500条推理轨迹微调Qwen3.5-4B（SR 34.5%）。最后引入E-RLVR与令牌生成正则化，结合量化实现82.8%推理延迟降低，为移动机器人本地低延迟VLM执行提供可行范式。",
+      "pdf_filename": "2606.27871.pdf",
+      "crawled_date": "2026-06-30",
+      "notes": "",
+      "pdf_url": "https://arxiv.org/pdf/2606.27871"
+    },
+    {
+      "arxiv_id": "2606.27644",
+      "title": "CascadeOcc: Rethinking 3D Occupancy World Models with Cascaded VQ Representations",
+      "authors": "Kyumin Hwang, Wonhyeok Choi, Jaeyeul Kim, Jihun Park, Daehee Park, Sunghoon Im",
+      "affiliations": "Daegu Gyeongbuk Institute of Science and Technology (DGIST)",
+      "published_date": "2026-06-26",
+      "categories": "cs.CV",
+      "abstract": "This letter proposes CascadeOcc, a novel occupancy world model that prioritizes intrinsic structural hierarchy over extrinsic auxiliary modalities for autonomous driving. Occupancy world models -- forecasting the future driving environment and planning the driving trajectory -- effectively bridge perception and planning, but current approaches often heavily rely on external modalities or large language models, failing to fully exploit the inherent structural potential of occupancy representations themselves. To enhance representational capacity for complex 3D scenes, we integrate a cascaded Vector Quantized (VQ) mechanism into an autoregressive framework. Following a coarse-to-fine principle, CascadeOcc progressively refines fine-grained details from global structures through a multi-scale architecture. Additionally, we incorporate a TimeMixer to capture multi-scale temporal dependencies, establishing a dual-hierarchy mechanism in both space and time. Experimental results on 4D occupancy forecasting and motion planning benchmarks demonstrate that CascadeOcc achieves superior performance among vision-centric approaches, validating that optimizing inherent representations is a powerful alternative to relying on external foundation models.",
+      "summary_cn": "CascadeOcc提出了一种新的3D占据世界模型，通过级联向量量化（VQ）机制在自回归框架中引入从粗到细的多尺度架构，充分利用占据表示本身的结构层次。模型同时集成TimeMixer捕获多尺度时间依赖，构建空间与时间的双层次机制。在4D占据预测和运动规划基准上，CascadeOcc在纯视觉方法中取得领先性能，验证了优化内在表示而非依赖外部基础模型的有效路径。",
+      "pdf_filename": "2606.27644.pdf",
+      "crawled_date": "2026-06-30",
+      "notes": "",
+      "pdf_url": "https://arxiv.org/pdf/2606.27644"
+    },
     {
       "arxiv_id": "2606.27313",
       "title": "ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
